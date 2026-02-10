@@ -47,14 +47,13 @@ export default function Header() {
                 <div className="absolute left-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-xl shadow-lg py-2 w-[240px]">
                     {[
-                      "Travelers",
-                      "Businesses & Enterprises",
-                      "Travel Partners & Agencies",
-                      "Our Impact",
+                      "For Personal Travelers",
+                      "For Enterprises",
+                      "For Ecosystem Partners",
                     ].map((item) => (
                       <Link
                         key={item}
-                        href="#"
+                        href="/PersonalTraveller"
                         className="block px-5 py-2.5 text-gray-700 text-[14px] hover:bg-[#0d7c92] hover:text-white transition-colors"
                       >
                         {item}
@@ -78,9 +77,10 @@ export default function Header() {
                 <div className="absolute left-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-xl shadow-lg py-2 w-[240px]">
                     {[
-                      "For Personal Travelers",
-                      "For Enterprises",
-                      "For Ecosystem Partners",
+                      "Travelers",
+                      "Businesses & Enterprises",
+                      "Travel Partners & Agencies",
+                      "Our Impact",
                     ].map((item) => (
                       <Link
                         key={item}
