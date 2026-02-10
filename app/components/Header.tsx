@@ -30,7 +30,7 @@ export default function Header() {
 
             {/* DESKTOP MENU */}
             <div className="hidden xl:flex items-center gap-9 text-white text-[18px] font-medium py-[13px]">
-              <Link href="#" className="hover:opacity-60">
+              <Link href="/home" className="hover:opacity-60">
                 Home
               </Link>
               <Link href="/about" className="hover:opacity-60">
