@@ -8,14 +8,14 @@ import {
   PlayCircle,
 } from "lucide-react";
 import { AiOutlineRobot, AiOutlineCalendar } from "react-icons/ai";
-import FAQSection from "./components/home/FAQSection";
-import BlackFridayHero from "./components/home/BlackFridayHero";
-import ConnectingHearts from "./components/home/ConnectingHearts";
-import PlanFinder from "./components/home/PlanFinder";
-import GlobalCoverage from "./components/home/GlobalCoverage";
-import JourneyPromo from "./components/home/JourneyPromo";
-import ContactConsultation from "./components/home/ContactConsultation";
-import CustomerFeedback from "./components/home/CustomerFeedback";
+import FAQSection from "./home/FAQSection";
+import BlackFridayHero from "./home/BlackFridayHero";
+import ConnectingHearts from "./home/ConnectingHearts";
+import PlanFinder from "./home/PlanFinder";
+import GlobalCoverage from "./home/GlobalCoverage";
+import JourneyPromo from "./home/JourneyPromo";
+import ContactConsultation from "./home/ContactConsultation";
+import CustomerFeedback from "./home/CustomerFeedback";
 
 /* ================= FEATURE PROPS TYPE ================= */
 type FeatureProps = {
@@ -27,29 +27,13 @@ type FeatureProps = {
 export default function HomePage() {
   return (
     <main>
-      {/* ================= BLACK FRIDAY OFFER SECTION ================= */}
       <BlackFridayHero />
-
-      {/* ================= CONNECTING HEARTS SECTION ================= */}
       <ConnectingHearts />
-
-      {/* ================= PLAN FINDER SECTION ================= */}
       <PlanFinder />
-
-      {/* ================= GLOBAL COVERAGE (WHITE) ================= */}
       <GlobalCoverage />
-
-      {/* ================= JOURNEY PROMO SECTION ================= */}
       <JourneyPromo />
-
-      {/* ================= FAQ SECTION ================= */}
-
       <FAQSection />
-
-      {/* ================= ContactConsultation SECTION ================= */}
       <ContactConsultation />
-
-      {/* ================= CustomerFeedback SECTION ================= */}
       <CustomerFeedback />
     </main>
   );

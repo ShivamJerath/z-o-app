@@ -17,13 +17,13 @@ export default function SolutionsBuiltForBusiness() {
             Solutions Built for Your Business.
           </h2>
           <p className="mt-3 text-[16px] text-gray-600 max-w-[700px] mx-auto">
-            Scale from a few travelers to global workforce coverage—mix & match programs
+            Scale from a few travelers to global workforce coverage—mix & match
+            programs
           </p>
         </div>
 
         {/* CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          
           {/* CARD 1 */}
           <div className="group">
             <div className="rounded-xl overflow-hidden shadow-sm">
@@ -38,7 +38,8 @@ export default function SolutionsBuiltForBusiness() {
               Corporate Travel Data
             </h3>
             <p className="mt-2 text-[15px] text-gray-600 leading-relaxed">
-              Pre-trip provisioning, data pools, expense integration.
+              Pre‑trip provisioning tied to bookings; regional or global data
+              pools; expense integration.
             </p>
 
             <a
@@ -60,10 +61,11 @@ export default function SolutionsBuiltForBusiness() {
             </div>
 
             <h3 className="mt-5 text-[18px] font-semibold text-gray-900">
-              Remote Worker Data
+              Remote & Hybrid Team Data
             </h3>
             <p className="mt-2 text-[15px] text-gray-600 leading-relaxed">
-              Always-on connectivity for distributed teams.
+              Always‑on data for distributed teams; monthly top‑ups;
+              device‑agnostic eSIM delivery.
             </p>
 
             <a
@@ -88,7 +90,7 @@ export default function SolutionsBuiltForBusiness() {
               Bespoke Global Programs
             </h3>
             <p className="mt-2 text-[15px] text-gray-600 leading-relaxed">
-              Tailored plans for industries like energy, consulting, etc.
+              Custom coverage bundles for project deployments, maritime/energy crews, events, or high‑security missions
             </p>
 
             <a
@@ -98,7 +100,6 @@ export default function SolutionsBuiltForBusiness() {
               Learn More →
             </a>
           </div>
-
         </div>
       </div>
     </section>

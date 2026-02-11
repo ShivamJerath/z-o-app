@@ -30,7 +30,7 @@ export default function Header() {
 
             {/* DESKTOP MENU */}
             <div className="hidden xl:flex items-center gap-9 text-white text-[18px] font-medium py-[13px]">
-              <Link href="/home" className="hover:opacity-60">
+              <Link href="/" className="hover:opacity-60">
                 Home
               </Link>
               <Link href="/about" className="hover:opacity-60">
@@ -47,16 +47,19 @@ export default function Header() {
                 <div className="absolute left-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-xl shadow-lg py-2 w-[240px]">
                     {[
-                      "For Personal Travelers",
-                      "For Enterprises",
-                      "For Ecosystem Partners",
+                      {
+                        label: "For Personal Travelers",
+                        href: "/PersonalTraveller",
+                      },
+                      { label: "For Enterprises", href: "/Enterprise" },
+                      { label: "For Ecosystem Partners", href: "/Ecosystem" },
                     ].map((item) => (
                       <Link
-                        key={item}
-                        href="/PersonalTraveller"
+                        key={item.label}
+                        href={item.href}
                         className="block px-5 py-2.5 text-gray-700 text-[14px] hover:bg-[#0d7c92] hover:text-white transition-colors"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     ))}
                   </div>
@@ -77,17 +80,23 @@ export default function Header() {
                 <div className="absolute left-0 top-full mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="bg-white rounded-xl shadow-lg py-2 w-[240px]">
                     {[
-                      "Travelers",
-                      "Businesses & Enterprises",
-                      "Travel Partners & Agencies",
-                      "Our Impact",
+                      { label: "Travelers", href: "/Traveller" },
+                      {
+                        label: "Businesses & Enterprises",
+                        href: "/BusinessAndEnterprises",
+                      },
+                      {
+                        label: "Travel Partners & Agencies",
+                        href: "/TravelPartner",
+                      },
+                      { label: "Our Impact", href: "/Impact" },
                     ].map((item) => (
                       <Link
-                        key={item}
-                        href="#"
+                        key={item.label}
+                        href={item.href}
                         className="block px-5 py-2.5 text-gray-700 text-[14px] hover:bg-[#0d7c92] hover:text-white transition-colors"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     ))}
                   </div>
@@ -95,7 +104,7 @@ export default function Header() {
               </div>
 
               <Link
-                href="#"
+                href="/Support"
                 className="hover:opacity-60 text-[23px] font-semibold"
               >
                 Support
@@ -201,16 +210,15 @@ export default function Header() {
 
             {/* HAMBURGER */}
             <button
-  onClick={() => setMobileOpen(!mobileOpen)}
-  className="xl:hidden text-white p-2 transition"
->
-  {mobileOpen ? (
-    <X className="w-6 h-6" />
-  ) : (
-    <Menu className="w-6 h-6" />
-  )}
-</button>
-
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="xl:hidden text-white p-2 transition"
+            >
+              {mobileOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
         </div>
 

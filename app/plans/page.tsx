@@ -1,6 +1,6 @@
 "use client";
 
-import PlanFinder from "../components/home/PlanFinder";
+import PlanFinder from "../home/PlanFinder";
 import { Check, Calendar, Search } from "lucide-react";
 
 export default function PlansPage() {

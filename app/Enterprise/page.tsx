@@ -1,17 +1,19 @@
 import EnterpriseHero from "./components/EnterpriseHero";
 import WhyEnterprisesChooseZoiko from "./components/WhyEnterprisesChooseZoiko";
-import SolutionsBuiltForBusiness from "./components/SolutionsBuiltForBusiness";
-import SeamlessIntegration from "./components/SeamlessIntegration";
-import ContactSpeak from "./components/ContactSpeak";
+import PlugIntoSystems from "./components/PlugIntoSystems";
+import ProvenAtScale from "./components/ProvenAtScale";
+import ContactConsultation from "../home/ContactConsultation";
+import EnterpriseFAQ from "./components/EnterpriseFAQ";
 
-export default function AboutPage() {
+export default function EnterprisePage() {
   return (
     <main>
         <EnterpriseHero />
         <WhyEnterprisesChooseZoiko />
-        <SolutionsBuiltForBusiness />
-        <SeamlessIntegration />
-        <ContactSpeak />
+        <PlugIntoSystems />
+        <ProvenAtScale />
+        <ContactConsultation />
+        <EnterpriseFAQ />
     </main>
   );
 }

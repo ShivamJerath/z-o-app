@@ -6,10 +6,10 @@ export default function WhyEnterprisesChooseZoiko() {
         {/* HEADER */}
         <div className="text-center mb-14">
           <h2 className="text-[32px] md:text-[40px] font-semibold text-gray-900">
-            Why Enterprises Choose Zoiko Orbit™
+            Why leading enterprises standardize on Zoiko Orbit™
           </h2>
           <p className="mt-3 text-[16px] text-gray-600">
-            Why thousands of travelers trust us every day
+            Unlock new revenue and delight travelers with ready-to-activate global data.
           </p>
         </div>
 
@@ -31,12 +31,12 @@ export default function WhyEnterprisesChooseZoiko() {
                 className="w-[72px] h-[72px] mx-auto mb-6"
               />
               <h3 className="text-[18px] font-semibold text-gray-900 mb-3">
-                Predictable Billing
+                Predictable Costs
               </h3>
               <p className="text-[15px] text-gray-600 leading-relaxed">
-                Simplify your expenses with consolidated global billing,
-                pooled data plans, and transparent cost tracking.
-                Say goodbye to unpredictable roaming charges.
+                Consolidated global spend,
+                Pooled data plans, volume pricing, cost 
+                center tagging.
               </p>
             </div>
 
@@ -48,12 +48,11 @@ export default function WhyEnterprisesChooseZoiko() {
                 className="w-[72px] h-[72px] mx-auto mb-6"
               />
               <h3 className="text-[18px] font-semibold text-gray-900 mb-3">
-                Tier-1 Network Security
+                Tier-1 Security & Compliance
               </h3>
               <p className="text-[15px] text-gray-600 leading-relaxed">
-                Enterprise-grade security and privacy. All connections
-                are GDPR-compliant and powered by Tier-1 networks with
-                SOC 2 and PCI DSS certifications.
+                GDPR, SOC 2, PCI — enterprise data 
+                handling standards baked in.
               </p>
             </div>
 
@@ -65,12 +64,10 @@ export default function WhyEnterprisesChooseZoiko() {
                 className="w-[72px] h-[72px] mx-auto mb-6"
               />
               <h3 className="text-[18px] font-semibold text-gray-900 mb-3">
-                Admin Dashboard
+                Easy Central Admin
               </h3>
               <p className="text-[15px] text-gray-600 leading-relaxed">
-                Gain total control with a centralized platform to
-                provision eSIMs, monitor data usage, and generate
-                detailed reports for all your teams.
+                Provision, reassign, and report on usage across teams in one dashboard.
               </p>
             </div>
 
