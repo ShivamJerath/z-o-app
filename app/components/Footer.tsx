@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowUp } from "lucide-react";
 import { FaWhatsapp, FaXTwitter, FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa6";
-
 import Link from "next/link";
 
 export default function Footer() {
+  const [openChat, setOpenChat] = useState<boolean>(false);
+  const [openPanel, setOpenPanel] = useState<boolean>(false);
+
   return (
     <footer className="bg-[#00718A] text-white">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-12 -mt-3">
@@ -32,22 +35,22 @@ export default function Footer() {
             <h3 className="text-[20px] font-semibold mb-5">Explore</h3>
             <ul className="space-y-3 text-[15px]">
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/coverage" className="hover:opacity-80 transition-opacity">
                   Coverage
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/plans" className="hover:opacity-80 transition-opacity">
                   Plans
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/Ecosystem" className="hover:opacity-80 transition-opacity">
                   Ecosystem
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/about" className="hover:opacity-80 transition-opacity">
                   About Us
                 </Link>
               </li>
@@ -59,17 +62,17 @@ export default function Footer() {
             <h3 className="text-[20px] font-semibold mb-5">Support & Help</h3>
             <ul className="space-y-3 text-[15px]">
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/Support" className="hover:opacity-80 transition-opacity">
                   Support Center
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/FAQ" className="hover:opacity-80 transition-opacity">
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/Accessibility" className="hover:opacity-80 transition-opacity">
                   Accessibility Options
                 </Link>
               </li>
@@ -81,17 +84,17 @@ export default function Footer() {
             <h3 className="text-[20px] font-semibold mb-5">Legal & Privacy</h3>
             <ul className="space-y-3 text-[15px]">
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/privacypolicy" className="hover:opacity-80 transition-opacity">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/TermsOfService" className="hover:opacity-80 transition-opacity">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/Cookie" className="hover:opacity-80 transition-opacity">
                   Cookie Preferences
                 </Link>
               </li>
@@ -103,22 +106,22 @@ export default function Footer() {
             <h3 className="text-[20px] font-semibold mb-5">For Business</h3>
             <ul className="space-y-3 text-[15px]">
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/PartnerWithUs" className="hover:opacity-80 transition-opacity">
                   Partner With Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/TravelOTA" className="hover:opacity-80 transition-opacity">
                   Travel Agencies & OTAs
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/CorporateTravelSolutions" className="hover:opacity-80 transition-opacity">
                   Corporate Travel Solutions
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/APIIntegration" className="hover:opacity-80 transition-opacity">
                   API Integrations
                 </Link>
               </li>
@@ -135,17 +138,17 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-[15px]">
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/corporateResponsibility" className="hover:opacity-80 transition-opacity">
                   Corporate Responsibility
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/InvestorRelation" className="hover:opacity-80 transition-opacity">
                   Investor Relations
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="/PressMedia" className="hover:opacity-80 transition-opacity">
                   Press & Media
                 </Link>
               </li>
@@ -237,24 +240,194 @@ export default function Footer() {
           Sacramento, CA 95811. All Rights Reserved.
         </div>
       </div>
+
       {/* WhatsApp Floating Button */}
-      <a
-  href="https://wa.me/"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed bottom-8 left-8 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50"
->
-  <FaWhatsapp className="text-white text-[32px]" />
-</a>
+      <button
+        onClick={() => setOpenChat(true)}
+        className="fixed bottom-8 left-8 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50"
+        aria-label="Open WhatsApp chat"
+      >
+        <FaWhatsapp className="text-white text-[32px]" />
+      </button>
+
+      {/* WhatsApp Chat Dialog */}
+      {openChat && (
+        <div className="fixed bottom-24 left-8 z-50 w-[320px] sm:w-[360px] rounded-2xl shadow-2xl overflow-hidden bg-white">
+
+          {/* Header */}
+          <div className="bg-[#2CC84D] text-white px-5 py-4 flex items-center justify-between">
+            <p className="text-[14px]">
+              Powered by <span className="font-semibold">Join.chat</span>
+            </p>
+            <button
+              onClick={() => setOpenChat(false)}
+              className="w-8 h-8 rounded-full bg-black/20 flex items-center justify-center hover:bg-black/30 transition-colors"
+              aria-label="Close chat"
+            >
+              ✕
+            </button>
+          </div>
+
+          {/* Messages */}
+          <div className="bg-[#F1F4F3] p-5 space-y-4">
+            <div className="bg-white px-4 py-3 rounded-xl shadow w-fit max-w-[85%] text-gray-800 text-[14px]">
+              Hello 👋, welcome to <b>Zoiko Orbit</b>
+            </div>
+            <div className="bg-white px-4 py-3 rounded-xl shadow w-fit max-w-[75%] text-gray-800 text-[14px]">
+              Can we help you?
+            </div>
+          </div>
+
+          {/* Open Chat Button */}
+          <div className="p-5 bg-white">
+            <a
+              href="https://wa.me/18004845574"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-[#25D366] text-white py-3 rounded-full font-semibold hover:bg-[#1ebe5d] transition-colors"
+            >
+              <FaWhatsapp className="text-xl" />
+              Open Chat
+            </a>
+          </div>
+        </div>
+      )}
+
+      {/* Get in Touch — Fixed vertical tab on right */}
+      <button
+        onClick={() => setOpenPanel(true)}
+        aria-label="Get in touch"
+        className="fixed z-50 bg-[#00718A] text-white text-[15px] font-semibold tracking-wide shadow-lg hover:bg-[#005f75] transition-colors flex items-center justify-center"
+        style={{
+          top: "35%",
+          right: 0,
+          transform: "translateY(-50%)",
+          writingMode: "vertical-lr",
+          textOrientation: "mixed",
+          rotate: "180deg",
+          padding: "20px 10px",
+          borderRadius: "0 8px 8px 0",
+        }}
+      >
+        Get in touch
+      </button>
+
+      {/* Get in Touch Slide-in Panel */}
+      {/* Backdrop */}
+      {openPanel && (
+        <div
+          className="fixed inset-0 bg-black/30 z-[60]"
+          onClick={() => setOpenPanel(false)}
+        />
+      )}
+
+      {/* Panel */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[340px] sm:w-[400px] bg-white z-[70] shadow-2xl overflow-y-auto transition-transform duration-300 ease-in-out ${
+          openPanel ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setOpenPanel(false)}
+          className="absolute top-5 right-5 text-gray-500 hover:text-gray-800 text-[20px] font-bold transition-colors"
+          aria-label="Close panel"
+        >
+          ✕
+        </button>
+
+        <div className="p-8 pt-10 text-gray-800">
+          {/* Title */}
+          <h2 className="text-[24px] font-bold mb-6">Get in Touch</h2>
+
+          {/* Live Chat */}
+          <div className="mb-6">
+            <h3 className="text-[17px] font-bold mb-2">Live Chat (Fastest)</h3>
+            <p className="text-[14px] text-gray-600 leading-relaxed mb-3">
+              Speak instantly with a Zoiko Orbit travel specialist.
+            </p>
+            <p className="text-[14px] text-gray-600 mb-1">
+              <span className="font-bold">Hours:</span> Mon–Sat 8:30am–8:30pm, Sun 10am–6pm.
+            </p>
+            <p className="text-[14px] text-gray-600 mb-5">
+              After hours, <span className="font-bold">Oriko is available 24/7.</span>
+            </p>
+            <button className="bg-[#00718A] hover:bg-[#005f75] text-white font-semibold px-6 py-3 rounded-lg transition-colors text-[15px]">
+              Chat with Oriko
+            </button>
+          </div>
+
+          <hr className="border-gray-200 my-6" />
+
+          {/* Call Us */}
+          <div className="mb-6">
+            <h3 className="text-[17px] font-bold mb-3">Call Us</h3>
+            <a
+              href="tel:+18003990087"
+              className="text-[#00718A] font-semibold text-[15px] hover:underline"
+            >
+              +1 800-399-0087
+            </a>
+          </div>
+
+          <hr className="border-gray-200 my-6" />
+
+          {/* More Help */}
+          <div>
+            <h3 className="text-[17px] font-bold mb-4">More Help</h3>
+            <ul className="space-y-3 text-[14px]">
+              <li className="flex gap-2">
+                <span className="text-gray-500 mt-0.5">•</span>
+                <span>
+                  <Link
+                    href="/coverage"
+                    className="text-[#00718A] font-semibold hover:underline"
+                    onClick={() => setOpenPanel(false)}
+                  >
+                    Coverage Checker
+                  </Link>{" "}
+                  – Check coverage in 200+ destinations.
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-gray-500 mt-0.5">•</span>
+                <span>
+                  <Link
+                    href="/RefundReturnPolicy"
+                    className="text-[#00718A] font-semibold hover:underline"
+                    onClick={() => setOpenPanel(false)}
+                  >
+                    Returns &amp; Cancellations
+                  </Link>{" "}
+                  – 30-day return window.
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-gray-500 mt-0.5">•</span>
+                <span>
+                  <Link
+                    href="/Support"
+                    className="text-[#00718A] font-semibold hover:underline"
+                    onClick={() => setOpenPanel(false)}
+                  >
+                    Help Center
+                  </Link>{" "}
+                  – Setup guides, roaming tips, troubleshooting.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       {/* Scroll to Top Button */}
       <button
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="fixed bottom-8 right-8 w-12 h-12 bg-[#0d7c92] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50 text-white"
->
-  <ArrowUp className="w-6 h-6" />
-</button>
-
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-[#0d7c92] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50 text-white"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="w-6 h-6" />
+      </button>
     </footer>
   );
 }

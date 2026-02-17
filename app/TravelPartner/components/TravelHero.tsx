@@ -11,7 +11,7 @@ export default function PartnerHero() {
     >
       {/* Background Image */}
       <img
-        src="/Tr-hero.png" // replace with your image
+        src="/Tr-hero.png" 
         alt="Global eSIM partnership"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -34,17 +34,7 @@ export default function PartnerHero() {
 
           <button
             className="
-              mt-8
-              bg-[#4B6FBF]
-              hover:bg-[#3f61aa]
-              transition
-              text-white
-              px-8
-              py-4
-              rounded-xl
-              text-[16px]
-              font-semibold
-            "
+              mt-8 bg-[#4B6FBF] hover:bg-[#3f61aa] transition text-white px-8py-4 rounded-xl text-[16px]font-semibold"
           >
             Become a Partner
           </button>

@@ -19,7 +19,7 @@ export default function BuiltToFitWorkflow() {
           {/* LEFT IMAGE */}
           <div className="flex justify-center lg:justify-start">
             <img
-              src="/man.png"   // upload your illustration
+              src="/man.png" 
               alt="Workflow integration"
               className="w-full max-w-[520px] object-contain"
             />

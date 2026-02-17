@@ -69,18 +69,18 @@ function StepCard({
       {/* IMAGE CARD */}
       <div className="relative bg-[#ECECEC] rounded-2xl h-[260px] flex items-center justify-center mb-8">
         {/* circle */}
-        <div className={`absolute w-[180px] h-[180px] rounded-full ${bgColor}`} />
+        {/* <div className={`absolute w-[180px] h-[180px] rounded-full ${bgColor}`} /> */}
 
         {/* step number */}
-        <div className="absolute top-6 left-6 w-9 h-9 bg-black text-white rounded-full flex items-center justify-center text-[15px] font-semibold z-10">
+        {/* <div className="absolute top-6 left-6 w-9 h-9 bg-black text-white rounded-full flex items-center justify-center text-[15px] font-semibold z-10">
           {step}
-        </div>
+        </div> */}
 
         {/* phone image */}
         <img
           src={image}
           alt={title}
-          className="relative z-10 w-[140px] object-contain"
+          className="relative z-10 w-[340px] object-contain"
         />
       </div>
 

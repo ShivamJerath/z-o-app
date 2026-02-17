@@ -1,6 +1,6 @@
 export default function SupportHeroSection() {
   return (
-    <section className="relative w-full h-[520px] md:h-[620px] overflow-hidden">
+    <section className="relative w-full h-[520px] md:h-[620px] overflow-hidden bg-white">
 
       {/* Background Image */}
       <img

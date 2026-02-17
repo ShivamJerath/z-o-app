@@ -1,7 +1,6 @@
 export default function WhyPartnerWithUs() {
   return (
     <section className="relative bg-[#F7FBFE] py-24 overflow-hidden">
-
       {/* Subtle Grid Background (optional image) */}
       {/* <div className="absolute inset-0 opacity-40 pointer-events-none">
         <img
@@ -12,20 +11,19 @@ export default function WhyPartnerWithUs() {
       </div> */}
 
       <div className="relative z-10 max-w-[1500px] mx-auto px-6 lg:px-16">
-
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-[32px] md:text-[40px] font-semibold text-gray-900">
             Why Partner with Us
           </h2>
           <p className="mt-3 text-[16px] text-gray-600">
-            Unlock new revenue and delight travelers with ready-to-activate global data.
+            Unlock new revenue and delight travelers with ready-to-activate
+            global data.
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 text-center">
-
           {/* Item 1 */}
           <div>
             <img
@@ -89,7 +87,6 @@ export default function WhyPartnerWithUs() {
               dedicated success team.
             </p>
           </div>
-
         </div>
       </div>
     </section>

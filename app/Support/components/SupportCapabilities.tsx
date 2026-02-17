@@ -1,16 +1,6 @@
 export default function SupportCapabilities() {
   return (
     <section className="relative bg-[#F7FBFE] py-24 overflow-hidden">
-
-      {/* Background Grid (optional image like your design) */}
-      {/* <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <img
-          src="/grid-bg.png"   // optional subtle grid background
-          alt="grid"
-          className="w-full h-full object-cover"
-        />
-      </div> */}
-
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-16">
 
         {/* Header */}
@@ -23,49 +13,40 @@ export default function SupportCapabilities() {
           </p>
         </div>
 
-        {/* Grid */}
+        {/* ROW 1 — 4 items */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-14 gap-x-10 text-center">
-
-          {/* Item 1 */}
           <FeatureItem
             icon="/do1.png"
             text="Access step-by-step setup guides for iOS, Android, Windows, and MDM platforms"
           />
-
-          {/* Item 2 */}
           <FeatureItem
             icon="/do2.png"
             text="Activate your eSIM with real-time provisioning assistance"
           />
-
-          {/* Item 3 */}
           <FeatureItem
             icon="/do3.png"
             text="Troubleshoot connection issues with AI-guided diagnostics"
           />
-
-          {/* Item 4 */}
           <FeatureItem
             icon="/do4.png"
             text="Chat live with our multilingual support agents anytime, anywhere"
           />
+        </div>
 
-          {/* Row 2 */}
+        {/* ROW 2 — 3 centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-10 text-center mt-14 max-w-[900px] mx-auto">
           <FeatureItem
             icon="/do5.png"
             text="Submit and track service requests through your secure MyZoiko portal"
           />
-
           <FeatureItem
             icon="/do6.png"
             text="Request enterprise onboarding and remote deployment support"
           />
-
           <FeatureItem
             icon="/do7.png"
             text="Watch quick-start video tutorials and browse our self-service library"
           />
-
         </div>
 
       </div>
@@ -84,11 +65,13 @@ function FeatureItem({
 }) {
   return (
     <div className="max-w-[260px] mx-auto">
+      
+      {/* Circle without extra padding */}
       <div className="w-[90px] h-[90px] mx-auto rounded-full bg-[#0C7687] flex items-center justify-center mb-6">
         <img
           src={icon}
           alt="feature icon"
-          className="w-[44px] h-[44px] object-contain"
+          className="w-[90px] h-[90px] object-contain"  // 👈 Increased size (less blue gap)
         />
       </div>
 

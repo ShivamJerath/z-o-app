@@ -27,9 +27,9 @@ export default function PersonalTravellerHero() {
             supports animal welfare.
           </p>
 
-          <button className="mt-8 bg-[#00718A] hover:bg-[#0995B3] transition text-white px-8 py-4 rounded-xl text-[16px] font-semibold">
+          <a href="/plans"><button className="mt-8 bg-[#00718A] hover:bg-[#0995B3] transition text-white px-8 py-4 rounded-xl text-[16px] font-semibold">
             Get Your eSIM
-          </button>
+          </button></a>
 
         </div>
       </div>
